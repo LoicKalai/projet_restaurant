@@ -1048,4 +1048,57 @@ http://www.templatemo.com/tm-515-eatery
       top: 60%;
     }
   }
+  @media (max-width: 991px){
+    .collapse.navbar-collapse{
+      width: 80vw;
+    }
 
+  }
+
+  /*--------------------------------------------
+  Responsive Tablette
+  ---------------------------------------------*/
+  @media (max-width: 768px){
+    .collapse.navbar-collapse{
+      width: 95vw;
+
+    }
+    h1{
+      font-size: 2rem;
+    }
+    .btnmenue{
+      width: 15%;
+    }
+    #google-map{
+      width: 50vw;
+    
+    }
+    .wow.fadeInUp.col-md-6.col-sm-12{
+      display: flex;
+      justify-content: center;
+    }
+
+  }
+  @media (max-width: 700px){
+    .bienvenue{
+      font-size: 4rem;
+    }
+  }
+  /*--------------------------------------------
+  Responsive Mobile
+  ---------------------------------------------*/
+  @media (max-width:425px ){
+    .bienvenue{
+      font-size: 3.5rem;
+      text-align: center;
+    }
+    .container{
+      margin-top: 15%;
+    }
+    .btnmenue{
+      width:20vw;
+    }
+    #google-map{
+      visibility: hidden;
+    }
+  }
