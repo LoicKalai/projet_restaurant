@@ -11,24 +11,43 @@
 }
 .boutonmenu{
     margin-bottom: 1.875rem;
-    
-    
+
+
 }
 .btnmenue{
     background-color: #fffdd0;
     height: 40px;
     width: 5%;
     margin: 0;
-  
+    font-weight:700;
+    border:none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.06);
+    
+    
+    
+
+    
+}
+.btnmenue:hover{
+    background-color: #f9c784;
+}
+.btnmenue:active{
+    box-shadow: inset 0px 0px 30px 0px #f9c784;  
+}
+.btnmenue:focus{
+    background-color:#fcaf58 ;
 }
 .place{
     display: flex;
     justify-content: space-evenly;
+    margin-top: 3.75rem;
     
 }
 
 #menu{
     padding: 0;
+    margin-top: 3.125rem;
 }
 
 
@@ -36,5 +55,5 @@
 .epice{
     margin-top: 6rem;
 }
-   
+ 
 

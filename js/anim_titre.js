@@ -121,3 +121,4 @@ var Typer = function(element) {
   }
   
   TyperSetup();
+
