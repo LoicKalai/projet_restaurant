@@ -1,43 +1,36 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 
 .bienvenue{
     position: absolute;
     top: 40vh;
     left: 40vw;
-    color: #fffdd0;
+    color: white;
     font-size: 6rem;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    text-shadow: 1px 0 0 #000000, 1px 1px 0 #000000, 0 1px 0 #000000, -2px 1px 0 #000000, -2px 0 0 #000000, -2px -2px 0 #000000, 0 -2px 0 #000000, 1px -2px 0 #000000;
+    font-family:'Montserrat' 
 }
+
 .boutonmenu{
     margin-bottom: 1.875rem;
-
-
 }
+
 .btnmenue{
-    background-color: #fffdd0;
+    background:none;
+    color: #000000;
+   
     height: 40px;
     width: 5%;
     margin: 0;
-    font-weight:700;
-    border:none;
+    font-weight: 600;
+    font-size: 20px;
     border-radius: 5px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.06);
-    
-    
-    
-
+    border: none;
+    /* box-shadow: inset  0px 0px 10px black; */
     
 }
 .btnmenue:hover{
-    background-color: #f9c784;
+    color:#F9C784;
 }
-.btnmenue:active{
-    box-shadow: inset 0px 0px 30px 0px #f9c784;  
-}
-.btnmenue:focus{
-    background-color:#fcaf58 ;
-}
+
 .place{
     display: flex;
     justify-content: space-evenly;
@@ -56,4 +49,5 @@
     margin-top: 6rem;
 }
  
+
 

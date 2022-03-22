@@ -753,40 +753,37 @@ http://www.templatemo.com/tm-515-eatery
   #contact .form-control {
     background: transparent;
     border: 0;
-    border-bottom: 1px solid #dddddd;
+    border-bottom: 2px solid #FCAF58;
     border-radius: 0;
     box-shadow: none;
     font-size: 14px;
     font-weight: normal;
     margin-bottom: 15px;
     transition: all ease-in-out 0.4s;
-  }
-
-  #contact .form-control:hover,
-  #contact .form-control:focus {
-    border-bottom-color: #c9c9c9;
-  }
-
-  #contact input {
+    }
+    
+    #contact .form-control:focus {
+    border-bottom-color: #4E598C;
+    }
+    
+    #contact input {
     height: 55px;
-  }
-
-  #contact button#cf-submit {
+    }
+    
+    #contact button#cf-submit {
     background: #4E598C;
     border-radius: 0;
     border: 0;
-    color: #ffffff;
+    color: #FFFFFF;
     font-weight: bold;
     height: 50px;
-  }
-
-  #contact button#cf-submit:hover {
+    margin-top: 60px;
+    }
+    
+    #contact button#cf-submit:hover {
     background: #292929;
-    color: #ffffff;
-  }
-
-
-
+    color: #FFFFFF;
+    }
   /*---------------------------------------
      FOOTER              
   -----------------------------------------*/
@@ -1076,9 +1073,10 @@ http://www.templatemo.com/tm-515-eatery
     .wow.fadeInUp.col-md-6.col-sm-12{
       display: flex;
       justify-content: center;
-    }
-
   }
+    .section-btn{
+      visibility: hidden;
+    }
   @media (max-width: 700px){
     .bienvenue{
       font-size: 4rem;
@@ -1102,4 +1100,24 @@ http://www.templatemo.com/tm-515-eatery
       visibility: hidden;
     }
   }
+  @media (max-width:350px ){
+    #logomundo{
+      font-size:3rem ;
+    }
+
+    .bienvenue{
+      font-size: 3rem;
+      text-align: center;
+    }
+    .container{
+      margin-top: 15%;
+    }
+    .btnmenue{
+      width:18vw;
+      font-size: 1rem;
+    }
+    #google-map{
+      visibility: hidden;
+    }
+  }}
 
