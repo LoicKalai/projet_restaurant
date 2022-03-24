@@ -20,16 +20,16 @@ main{
     display: flex;
     justify-content: center;
     overflow-y: hidden;
-    overflow-x: hidden;
-    
+    overflow-x: hidden;   
 }
+                        /* HEADER WITH LOGO, SEARCH BAR AND CONNECTION */
 #header{
 display: flex;
 justify-content: space-evenly;
 align-items: center;   
 margin: 0;
 padding: 0;
-background-color: rgb(199, 185, 199);
+background-color: rgb(255, 255, 255);
 }
 #logo{
     font-family: 'Radgivare';
@@ -54,7 +54,6 @@ background-color: rgb(199, 185, 199);
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 40px;
 }
-
 #searchbutton{
     background-color: #4E598C;
     color: white;
@@ -64,6 +63,17 @@ background-color: rgb(199, 185, 199);
     font-size: 100%;
     font-family: "RobotoM";
     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#connect{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#usericon{
+    width: 30%;
+    height: 30%; 
 }
 #mainmenu{
     width: 90vw;
@@ -176,7 +186,7 @@ flex-direction: column;
     background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     margin: 50px;
 }
@@ -192,9 +202,13 @@ flex-direction: column;
     background: #F9C784;
     border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    width: 40%;
+    width: 45%;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
 
 }
 #add{
@@ -222,7 +236,7 @@ h2{
 margin: 0;
 font-family: 'Roboto';
 color: white;
-font-size: 1rem;
+font-size: 1.4rem;
 }
 h3{
 margin: 0;
