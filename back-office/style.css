@@ -21,7 +21,8 @@ main{
 }
 #header{
 display: flex;
-justify-content: space-evenly;   
+justify-content: space-evenly;
+align-items: center;   
 margin: 0;
 padding: 0;
 background-color: rgb(199, 185, 199);
@@ -30,6 +31,9 @@ background-color: rgb(199, 185, 199);
     width: 40vw;
     border-radius: 30px;
     height: 5vh;
+    background: #EBE5E5;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
 }
 #logo{
     font-family: 'Radgivare';
@@ -49,11 +53,12 @@ background-color: rgb(199, 185, 199);
     height: 5vh;
     font-size: 100%;
     font-family: "RobotoM";
+    display: flex;
 }
 #mainmenu{
     width: 90vw;
     height: 90vh;
-    background-color: azure;
+    background-color: rgb(255, 255, 255);
     border: 1px solid;
     border-radius: 10px;
     display: flex;
@@ -86,7 +91,7 @@ align-items: center;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    font-family: 'Roboto';
+    font-family: 'RobotoM';
 }
 #bois{
     width: 60%;
@@ -131,16 +136,16 @@ height: 80%;
 border-color: rgb(107, 51, 30);
 margin: 0;
 display: flex;
-justify-content: space-evenly;
 align-items: center;
 flex-wrap: wrap;
 overflow-y: scroll;
+justify-content: space-between;
 }
 .thing{
     width: 20%;
     height: 30%;
     background-color: #FCAF58;
-    margin: 30px;
+    margin: 50px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .things{
@@ -162,6 +167,7 @@ flex-direction: column;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    margin: 50px;
 }
 .image{
     width: 80%;
