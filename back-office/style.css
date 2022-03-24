@@ -82,6 +82,11 @@ align-items: center;
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: 'Roboto';
 }
 #bois{
     width: 60%;
@@ -89,6 +94,11 @@ align-items: center;
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: 'Roboto';
 }
 #plat{
     width: 60%;
@@ -96,6 +106,11 @@ align-items: center;
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: 'Roboto';
 }
 #dess{
     width: 60%;
@@ -103,6 +118,11 @@ align-items: center;
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: 'Roboto';
 }
 
 #rightpart{
@@ -120,14 +140,23 @@ overflow-y: scroll;
     width: 20%;
     height: 30%;
     background-color: #FCAF58;
+    margin: 30px;
 }
 .things{
 width: 20%;
 height: 25%;
 background-color: #FCAF58;
-margin: 3%;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 10px;
+}
+#encircle{
+    width: 25%;
+    height: 30%;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 #add{
     font-size: 3rem;
@@ -154,11 +183,11 @@ h2{
 
 }
 h3{
-    
+margin: 0;    
 }
 .choice{
-    width: 70%;
-    height: 40%;
+    width: 90%;
+    height: 60%;
 
 }
 .image{
@@ -170,13 +199,4 @@ h3{
     width: 100%;
     height: 10%;
     background-color: black;
-}
-#encircle{
-    width: 25%;
-    height: 30%;
-    background-color: aqua;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
 }
