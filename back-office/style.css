@@ -14,7 +14,7 @@ main{
     height: 100vh;  
     margin: 0;
     padding: 0;
-    background-color: rgb(170, 132, 132);
+    background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
     
@@ -24,11 +24,11 @@ display: flex;
 justify-content: space-evenly;   
 margin: 0;
 padding: 0;
-background-color: purple;
+background-color: rgb(199, 185, 199);
 }
 #searchbar{
     width: 40vw;
-    border-radius: 10px;
+    border-radius: 30px;
     height: 5vh;
 }
 #logo{
@@ -79,22 +79,29 @@ align-items: center;
 #entr{
     width: 60%;
     height: 20%;
-    background-color: blue;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
 }
 #bois{
-    width: 10vw;
-    height: 10vh;
-    background-color: aqua;
+    width: 60%;
+    height: 20%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
 }
 #plat{
-    width: 10vw;
-    height: 10vh;
-    background-color: blueviolet;
+    width: 60%;
+    height: 20%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
 }
 #dess{
-    width: 10vw;
-    height: 10vh;
-    background-color: brown;
+    width: 60%;
+    height: 20%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
 }
 
@@ -107,6 +114,11 @@ display: flex;
 justify-content: space-evenly;
 align-items: center;
 flex-wrap: wrap;
+}
+.thing{
+    width: 20%;
+    height: 30%;
+    background-color: #FCAF58;
 }
 .things{
 width: 20%;
@@ -136,4 +148,20 @@ border-radius: 10px;
     border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-size: 1rem;
+}
+h2{
+
+}
+h3{
+    
+}
+.choice{
+    width: 70%;
+    height: 40%;
+
+}
+.image{
+    width: 65%;
+    height: 35%;
+    border-radius: 10px;
 }
