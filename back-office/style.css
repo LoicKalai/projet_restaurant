@@ -47,24 +47,27 @@ background-color: rgb(255, 255, 255);
     display: flex;
 }
 #searchbar{
-    width: 40vw;
+    width: 80%;
     border-radius: 30px;
     height: 5vh;
     background: #EBE5E5;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 40px;
+    border: none;
 }
 #searchbutton{
     background-color: #4E598C;
     color: white;
     border-radius: 40px;
-    width: 10vw;
+    width: 15%;
     height: 5vh;
     font-size: 100%;
     font-family: "RobotoM";
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 #connect{
     display: flex;
@@ -75,6 +78,7 @@ background-color: rgb(255, 255, 255);
     width: 30%;
     height: 30%; 
 }
+                                                            /* MAIN DIV */
 #mainmenu{
     width: 90vw;
     height: 90vh;
@@ -83,9 +87,9 @@ background-color: rgb(255, 255, 255);
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center;  
 }
+                                                        /* LEFT SIDE OF THE MAIN DIV */
 #choix{
     display: flex;
     flex-direction: column;
@@ -93,6 +97,7 @@ background-color: rgb(255, 255, 255);
     height: 100%;
     width: 20%;
 }
+                                                    /* BLACK LINE SEPARATING LEFT AND RIGHT SIDE */
 #line{
 border-right: 2px solid;
 width: 100%;
@@ -102,6 +107,7 @@ flex-direction: column;
 justify-content: space-evenly;
 align-items: center;
 }
+                                                /* 4 DIVS WITH IMAGES ON THE LEFT SIDE TO CHOOSE WHAT YOU WANT TO SEE */
 #entr{
     width: 60%;
     height: 20%;
@@ -150,7 +156,7 @@ align-items: center;
     justify-content: space-evenly;
     font-family: 'Roboto';
 }
-
+                                                /* MAIN DIV OF THE RIGHT PART */
 #rightpart{
 width: 80%;
 height: 80%;
@@ -162,6 +168,7 @@ flex-wrap: wrap;
 overflow-y: scroll;
 justify-content: space-between;
 }
+                                                    /* ORANGE DIVS ON THE RIGHT PART */
 .thing{
     width: 20%;
     height: 30%;
@@ -208,7 +215,7 @@ flex-direction: column;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1rem;
+    font-size: 100%;
 
 }
 #add{
@@ -254,3 +261,5 @@ font-family: 'Roboto';
     display: flex;
     justify-content: space-between;
 }
+
+
