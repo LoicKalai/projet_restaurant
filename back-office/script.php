@@ -1,3 +1,20 @@
+<?php
+
+$host = 'localhost';
+$dbname = 'Restaurant';
+$username = 'phpmyadmin';
+$password = '632bifhm0l';
+
+$entrees = "SELECT Nom,Prix,Images FROM produits INNER JOIN categorie_plat WHERE id_categorie = categorie_plat.id AND id_categorie = 1";
+$desserts = "SELECT Nom,Prix,Images FROM produits INNER JOIN categorie_plat WHERE id_categorie = categorie_plat.id AND id_categorie = 2";
+$plats = "SELECT Nom,Prix,Images FROM produits INNER JOIN categorie_plat WHERE id_categorie = categorie_plat.id AND id_categorie = 3";
+$boissons = "SELECT Nom,Prix,Images FROM produits INNER JOIN categorie_plat WHERE id_categorie = categorie_plat.id AND id_categorie = 4";
+
+try{
+	$conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -26,18 +43,21 @@
         </div>    
         <div id="rightpart">
             <div class="thing" id="add"><img id="circle" src="./akar-icons_circle-plus.svg" alt=""><button class="butt">Ajouter</button></div>
-            <div id="encircle"><div class="things"><h2>Horiatiki</h2><img class="image" src="./horiatiki.jpg" alt="plat n1"></div><div id="divbelow"><button id="modifydelete">Modifier</button><button id="modifydelete">Supprimer</button></div></div>
-            <div id="encircle"><div class="things"><h2></h2><img src="" alt=""></div><div id="divbelow"><button id="modifydelete">Modifier</button><button id="modifydelete">Supprimer</button></div></div>
-            <div id="encircle"><div class="things"><h2></h2><img src="" alt=""></div><div id="divbelow"><button id="modifydelete">Modifier</button><button id="modifydelete">Supprimer</button></div></div>
-            <div id="encircle"><div class="things"><h2></h2><img src="" alt=""></div><div id="divbelow"><button id="modifydelete">Modifier</button><button id="modifydelete">Supprimer</button></div></div>
-            <div id="encircle"><div class="things"><h2></h2><img src="" alt=""></div><div id="divbelow"><button id="modifydelete">Modifier</button><button id="modifydelete">Supprimer</button></div></div>
-            <div id="encircle"><div class="things"><h2></h2><img src="" alt=""></div><div id="divbelow"><button id="modifydelete">Modifier</button><button id="modifydelete">Supprimer</button></div></div>
+            <?php $stmt = $conn->query($entrees); ?>
+            <?php while($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
+                <div id="encircle">
+                    <div class="things">
+                        <h2><?php echo htmlspecialchars($row['Nom']); ?></h2>
+                        <img class="image" src="<?php echo htmlspecialchars($row['Images']); ?>" alt="plat n1">
+                    </div>
+                    <div id="divbelow">
+                        <button id="modifydelete">Modifier</button>
+                        <button id="modifydelete">Supprimer</button>
+                    </div>
+                </div>
+   	  	    <?php endwhile; ?>
         </div>
     </div>
-
-
-
-
 
 
 
@@ -50,3 +70,14 @@
 <script src="./script.js"></script>    
 </body>
 </html>
+
+<?php
+
+if($stmt === false){
+    die("Erreur");
+}
+}catch (PDOException $e){
+  	die("Impossible de se connecter à la base de données $dbname :" . $e->getMessage());
+}
+
+?>
