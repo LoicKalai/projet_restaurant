@@ -30,6 +30,9 @@
 .btnmenue:hover{
     color:#F9C784;
 }
+.btnmenue:focus{
+    color:#F9C784;
+}
 
 .place{
     display: flex;

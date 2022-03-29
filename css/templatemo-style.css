@@ -518,6 +518,10 @@ http://www.templatemo.com/tm-515-eatery
 
   .team-info {
     padding: 10px 30px 20px 30px;
+    
+  }
+  .team-info, p{
+    text-align: center;
   }
 
   .team-thumb .team-hover {
@@ -679,6 +683,9 @@ http://www.templatemo.com/tm-515-eatery
     background: rgba(0,0,0,0.8);
   }
 
+  .entree .plat .dessert .boisson{
+    display: none;
+  }
 
 
   /*---------------------------------------
