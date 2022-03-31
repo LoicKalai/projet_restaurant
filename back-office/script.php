@@ -41,9 +41,57 @@ try{
                 <div id="dess"><h3>Desserts</h3><img class="choice" src="./undraw_cookie_love_ulvn.svg" alt=""></div>
             </div>
         </div>    
-        <div id="rightpart">
+        <div id="rightpart" class="boxEntree">
             <div class="thing" id="add"><img id="circle" src="./akar-icons_circle-plus.svg" alt=""><button class="butt">Ajouter</button></div>
             <?php $stmt = $conn->query($entrees); ?>
+            <?php while($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
+                <div id="encircle">
+                    <div class="things">
+                        <h2><?php echo htmlspecialchars($row['Nom']); ?></h2>
+                        <img class="image" src="<?php echo htmlspecialchars($row['Images']); ?>" alt="plat n1">
+                    </div>
+                    <div id="divbelow">
+                        <button id="modifydelete">Modifier</button>
+                        <button id="modifydelete">Supprimer</button>
+                    </div>
+                </div>
+   	  	    <?php endwhile; ?>
+        </div>
+        <div id="rightpart" class="boxBoissons" >
+            <div class="thing" id="add"><img id="circle" src="./akar-icons_circle-plus.svg" alt=""><button class="butt">Ajouter</button></div>
+            <?php $stmt = $conn->query($boissons); ?>
+            <?php while($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
+                <div id="encircle">
+                    <div class="things">
+                        <h2><?php echo htmlspecialchars($row['Nom']); ?></h2>
+                        <img class="image" src="<?php echo htmlspecialchars($row['Images']); ?>" alt="plat n1">
+                    </div>
+                    <div id="divbelow">
+                        <button id="modifydelete">Modifier</button>
+                        <button id="modifydelete">Supprimer</button>
+                    </div>
+                </div>
+   	  	    <?php endwhile; ?>
+        </div>
+        <div id="rightpart" class="boxPlats">
+            <div class="thing" id="add"><img id="circle" src="./akar-icons_circle-plus.svg" alt=""><button class="butt">Ajouter</button></div>
+            <?php $stmt = $conn->query($plats); ?>
+            <?php while($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
+                <div id="encircle">
+                    <div class="things">
+                        <h2><?php echo htmlspecialchars($row['Nom']); ?></h2>
+                        <img class="image" src="<?php echo htmlspecialchars($row['Images']); ?>" alt="plat n1">
+                    </div>
+                    <div id="divbelow">
+                        <button id="modifydelete">Modifier</button>
+                        <button id="modifydelete">Supprimer</button>
+                    </div>
+                </div>
+   	  	    <?php endwhile; ?>
+        </div>
+        <div id="rightpart" class="boxDesserts">
+            <div class="thing" id="add"><img id="circle" src="./akar-icons_circle-plus.svg" alt=""><button class="butt">Ajouter</button></div>
+            <?php $stmt = $conn->query($desserts); ?>
             <?php while($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
                 <div id="encircle">
                     <div class="things">
