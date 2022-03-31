@@ -1,5 +1,7 @@
 <?php
 
+
+
 $host = 'localhost';
 $dbname = 'Restaurant';
 $username = 'phpmyadmin';
@@ -14,6 +16,7 @@ try{
 	$conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
 
 ?>
+include './ajout.php'
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -28,7 +31,7 @@ try{
 <body>
 <header id="header">
         <div id="logo"><p><span id="span">Sabor</span><span>del Mundo</span></p></div>
-        <div id="searchdiv"><input type="search" id="searchbar"><button id="searchbutton">Recherche<img src="./search.svg" alt=""></button></div></div>
+        <div id="searchdiv"><input type="search" id="searchbar"><button id="searchbutton"><img src="./search.svg" alt=""></button></div></div>
         <div id="connect"><img id="usericon" src="./user.svg" alt="icone d'une personne">mr. Johnson</div>
     </header>    
 <main>
