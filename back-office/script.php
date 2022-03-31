@@ -5,7 +5,7 @@
 $host = 'localhost';
 $dbname = 'Restaurant';
 $username = 'phpmyadmin';
-$password = 'molobo26+';
+$password = '';
 
 $entrees = "SELECT Nom,Prix,Images FROM produits INNER JOIN categorie_plat WHERE id_categorie = categorie_plat.id AND id_categorie = 1";
 $desserts = "SELECT Nom,Prix,Images FROM produits INNER JOIN categorie_plat WHERE id_categorie = categorie_plat.id AND id_categorie = 2";
@@ -16,7 +16,7 @@ try{
 	$conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
 
 ?>
-include './ajout.php'
+
 
 <!DOCTYPE html>
 <html lang="fr">
