@@ -1,24 +1,28 @@
 <?php
-// Email Submit
-// Note: filter_var() requires PHP >= 5.2.0
-if ( isset($_POST['email']) && isset($_POST['name']) && isset($_POST['subject']) && isset($_POST['message']) && filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) ) {
- 
-  // detect & prevent header injections
-  $test = "/(content-type|bcc:|cc:|to:)/i";
-  foreach ( $_POST as $key => $val ) {
-    if ( preg_match( $test, $val ) ) {
-      exit;
-    }
-  }
 
-$headers = 'From: ' . $_POST["name"] . '<' . $_POST["email"] . '>' . "\r\n" .
-    'Reply-To: ' . $_POST["email"] . "\r\n" .
-    'X-Mailer: PHP/' . phpversion();
+$regleNom = "/^[a-zA-Z '-]+$/";
+$reglePrenom = "/^[a-zA-Z '-]+$/";
+$regleEmail = "/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,6}$/";
+$regleMessage = "/^[a-zA-ZáàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ',;()-. ]+$/";
+$res = 'toto';
+if((isset($_POST['nom']))&&(preg_match($regleNom, $_POST['nom']))){
+    $nom = $_POST['nom']; 
+} 
 
-  //
-  mail( "khaitawng2014@gmail.com", $_POST['subject'], $_POST['message'], $headers );
- 
-  //      ^
-  //  Replace with your email 
+if((isset($_POST['prenom']))&&(preg_match($reglePrenom, $_POST['prenom']))){
+  $prenom = $_POST['prenom']; 
+} 
+
+if((isset($_POST['mail']))&&(preg_match($regleEmail, $_POST['mail']))){
+    $mail = $_POST['mail'];
 }
+if((isset($_POST['message']))&&(preg_match($regleMessage, $_POST['message']))){
+    $message = $_POST['message'];
+}
+if(($nom)&&($prenom)&&($mail)&&($message)){
+    $res = array('validation' => "Email envoyé");
+    echo json_encode($res);
+    mail("m.kammoun@codeur.online", "Bonjour, $prenom $nom", $message, "From: $mail");
+}
+
 ?>

@@ -346,6 +346,10 @@ http://www.templatemo.com/tm-515-eatery
       border-bottom: 0;
       background: 0 0; 
     }
+    .custom-navbar .navbar-toggle .icon-bar {
+      background: #252525;
+      border-color: transparent;
+    }
 
     .custom-navbar.top-nav-collapse {
       background: #ffffff;
@@ -518,6 +522,10 @@ http://www.templatemo.com/tm-515-eatery
 
   .team-info {
     padding: 10px 30px 20px 30px;
+    
+  }
+  .team-info, p{
+    text-align: center;
   }
 
   .team-thumb .team-hover {
@@ -679,17 +687,16 @@ http://www.templatemo.com/tm-515-eatery
     background: rgba(0,0,0,0.8);
   }
 
+  .entree .plat .dessert .boisson{
+    display: none;
+  }
 
 
   /*---------------------------------------
       TESTIMONIAL             
   -----------------------------------------*/
 
-  #testimonial {
-    background: url('../images/testimonial-bg.jpg') center center no-repeat;
-    background-size: cover;
-  }
-
+ 
   #testimonial .owl-dots {
     position: relative;
     top: 0;
@@ -771,19 +778,34 @@ http://www.templatemo.com/tm-515-eatery
     }
     
     #contact button#cf-submit {
-    background: #4E598C;
-    border-radius: 0;
-    border: 0;
-    color: #FFFFFF;
-    font-weight: bold;
-    height: 50px;
-    margin-top: 60px;
-    }
+      background: #4E598C;
+      border-radius: 0;
+      border: 0;
+      color: #FFFFFF;
+      font-weight: bold;
+      height: 50px;
+      margin-top: -10px;
+      }
     
     #contact button#cf-submit:hover {
     background: #292929;
     color: #FFFFFF;
     }
+    .errornom, .errorprenom, .errormail, .errormess
+  {
+    margin-top: -18.5px;
+    color: red;
+    font-size: 1.2rem;
+    visibility: hidden;
+  }
+
+  .validmess
+  {
+    margin-top: -27px;
+    
+    color: limegreen;
+    display: none;
+  }
   /*---------------------------------------
      FOOTER              
   -----------------------------------------*/
@@ -792,6 +814,7 @@ http://www.templatemo.com/tm-515-eatery
     border-top: 1px solid rgba(0,0,0,0.05);
     padding: 120px 0;
     padding-bottom: 80px;
+    
   }
 
   footer .section-title {
@@ -1073,10 +1096,14 @@ http://www.templatemo.com/tm-515-eatery
     .wow.fadeInUp.col-md-6.col-sm-12{
       display: flex;
       justify-content: center;
-  }
+    }
     .section-btn{
       visibility: hidden;
     }
+ 
+  }
+
+
   @media (max-width: 700px){
     .bienvenue{
       font-size: 4rem;
@@ -1119,5 +1146,46 @@ http://www.templatemo.com/tm-515-eatery
     #google-map{
       visibility: hidden;
     }
-  }}
+  }
 
+/* .burger{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50vh;
+    background-color: whitesmoke;
+    display: none;
+    position: absolute;
+    z-index: 500;
+    
+    
+  }
+.burger .collapse{
+  position: absolute;
+  z-index: 501;
+  top: 10%;
+  left: 35%;
+}
+
+.burger .nav{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 502;
+  color: #000;
+  
+}
+
+.burger .smoothScroll{
+  position: absolute;
+  z-index: 503;
+  top: 10%;
+  left: 35%;
+  color: #000;
+}
+.navbar-toggle{
+  margin-right: 5vh;
+}
+#logomundo{
+  margin-left: 3vh;
+} */
