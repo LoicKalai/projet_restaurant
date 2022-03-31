@@ -5,7 +5,7 @@
 $host = 'localhost';
 $dbname = 'Restaurant';
 $username = 'phpmyadmin';
-$password = 'viSo5od/qgfNnQ==';
+$password = 'molobo26+';
 
 $entrees = "SELECT Nom,Prix,Images FROM produits INNER JOIN categorie_plat WHERE id_categorie = categorie_plat.id AND id_categorie = 1";
 $desserts = "SELECT Nom,Prix,Images FROM produits INNER JOIN categorie_plat WHERE id_categorie = categorie_plat.id AND id_categorie = 2";
