@@ -51,57 +51,60 @@ bois.addEventListener('click', function(){
     boxPlats.style.display="none";
     console.log('tyty');
 })
-// let toto = document.querySelector('#spanResult')
-// let tata = document.querySelector('#spanResult2')
-// let tutu = document.querySelector('#spanResult3')
-// let titi = document.querySelector('#spanResult4')
+let error1 = document.querySelector('#errormessage')
+let error2 = document.querySelector('#errormessage2')
+let error3 = document.querySelector('#errormessage3')
+let error4 = document.querySelector('#errormessage4')
+let error5 = document.querySelector('#errormessage5')
 let main = document.querySelector('main')
 res = document.getElementById('done')
 let validate = document.querySelector('#validate')
 const form = document.querySelector('form')
-form.addEventListener('submit', function(e) {
+form.addEventListener('validate', function(e) {
     e.preventDefault()
-    let fields = {}
-    fields.text1 = document.querySelector('.text1').value;
-    fields.text2 = document.querySelector('.text2').value;
-    fields.text3 = document.querySelector('.text3').value;
-    fields.text4 = document.querySelector('.text4').value;
-    if (fields.text1 == "") {
-        toto.innerHTML = 'Mettez entre 2 et 15 caractères'
-        toto.style.display = 'flex'
+    let inputinfo = {}
+    inputinfo.first = document.querySelector('#name').value;
+    inputinfo.second = document.querySelector('#description').value;
+    inputinfo.third = document.querySelector('#price').value;
+    inputinfo.fourth = document.querySelector('#inputGroupFile04').value;
+    inputinfo.fifth = document.querySelector('#foodclass').value
+
+    if (inputinfo.first == "") {
+        error1.innerHTML = 'Mettez plus que 5 caractères'
+        error1.style.display = 'flex'
     }
-    if (fields.text2 == "") {
-        tata.innerHTML = 'Mettez un e-mail valide en format blabla@service.domaine'
-        tata.style.display = 'flex'
+    if (inputinfo.second == "") {
+        error2.innerHTML = 'Mettez plus que 5 caractères'
+        error2.style.display = 'flex'
     }
-    if (fields.text3 == "") {
-        tutu.innerHTML = 'Mettez entre 2 et 15 caractères'
-        tutu.style.display = 'flex'
+    if (inputinfo.third == "") {
+        error3.innerHTML = 'Mettez le prix'
+        error3.style.display = 'flex'
     }
-    if (fields.text4 == "") {
-        titi.innerHTML = 'Mettez entre 10 et 20 caractères'
-        titi.style.display = 'flex'
+    if (inputinfo.fourth == "") {
+        error4.innerHTML = 'Mettez une image'
+        error4.style.display = 'flex'
     }
-    function isEmail(text2) {
-        let regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
-        return regex.test(String(text2).toLowerCase());
-       }
-    function isName(text1){
+    if (inputinfo.fifth == "") {
+        error5.innerHTML = 'Choisissez une categorie'
+        error5.style.display = 'flex'
+    }
+    function isName(first){
         let regex1 = /^[A-Za-z][A-Za-z]+$/;
-        return regex1.test(text1)
-    }   
-    function isSubject(text3){
-        let regex2 = /^[A-Za-z][A-Za-z]+$/;
-        return regex2.test(text3);
+        return regex1.test(first)
     }
-    function isMessage(text4){
-        let regex3 = /^[A-Za-z][A-Za-z]+$/;
-        return regex3.test(text4);
+    function isName(second){
+        let regex1 = /^[A-Za-z][A-Za-z]+$/;
+        return regex1.test(second)
     }
-    console.log(isEmail(fields.text2));
-    console.log(isName(fields.text1));
-    console.log(isSubject(fields.text3));
-    console.log(isMessage(fields.text4));
+    function isName(third){
+        let regex1 = /^[A-Za-z][A-Za-z]+$/;
+        return regex1.test(third)
+    } 
+    
+    console.log(isEmail(fields.first));
+    console.log(isName(fields.second));
+    console.log(isSubject(fields.third));
     if (isNotEmpty(fields.text1) && isNotEmpty(fields.text2) && isNotEmpty(fields.text3) && isNotEmpty(fields.text4)) {
         if (isEmail(fields.text2) && isName(fields.text1) && isSubject(fields.text3) && isMessage(fields.text4)) {
              const formData = new FormData(form);

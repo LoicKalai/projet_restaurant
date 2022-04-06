@@ -378,6 +378,31 @@ font-family: 'Roboto';
     height: 50px;
     background-color: black;
 }
+#errormessage1{
+    color: red;
+    width: 40%;
+    display: none;
+  }
+  #errormessage2{
+    color: red;
+    width: 40%;
+    display: none;
+  }
+  #errormessage3{
+    color: red;
+    width: 40%;
+    display: none;
+  }
+  #errormessage4{
+    color: red;
+    width: 40%;
+    display: none;
+  }
+  #errormessage5{
+    color: red;
+    width: 40%;
+    display: none;
+  }
 
 
                                                     /* RESPONSIVE TABLET*/
