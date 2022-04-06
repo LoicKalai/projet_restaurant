@@ -317,6 +317,67 @@ font-family: 'Roboto';
   .button:active {
     top: 1px;
   }
+  #form{
+      width: 30%;
+      height: 60%;
+      background-color: #FCAF58;
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: column;
+      color: #4e598c;
+      position: absolute;
+      border-radius: 20px;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+.popp{
+    margin: 0;
+    margin-left: 30px;
+    padding: 0;
+    font-size: 1.5rem;
+}
+.descpop{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    height: 25px;
+    width: 250px;
+    font-family: 'RobotoM';
+    margin-left: 30px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+#validate{
+    border-radius: 10px;
+    border: none;
+    background-color: #4E598C;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 100px;
+    height: 30px;
+    margin-left: 30px;
+    color: white;
+    font-family: 'RobotoM';
+    font-size: 1rem;
+}
+.input-group{
+   border-radius: 10px;
+   margin-left: 30px;
+   color: white;
+}
+.form-control{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none; 
+}
+#done{
+    width: 50px;
+    height: 50px;
+    background-color: black;
+}
 
 
                                                     /* RESPONSIVE TABLET*/

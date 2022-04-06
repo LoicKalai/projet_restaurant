@@ -1,7 +1,5 @@
 <?php
 
-
-
 $host = 'localhost';
 $dbname = 'Restaurant';
 $username = 'phpmyadmin';
@@ -16,7 +14,6 @@ try{
 	$conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
 
 ?>
-include './ajout.php'
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -110,14 +107,34 @@ include './ajout.php'
         </div>
     </div>
 
-
+    <form id="form" action="">
+        <p class="popp">Nom</p>
+        <input type="text" name="Nom" class="descpop">
+        <p class="popp">Description</p>
+        <input type="text" name="Description" class="descpop">
+        <p class="popp">Prix</p>
+        <input type="text" name="Prix" class="descpop">
+        <p class="popp">Images</p>
+        <div class="input-group">
+            <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+        </div>
+        <p class="popp">Id_categorie</p>
+        <select name="id_categorie" class="descpop">
+            <option value="">Choisissez la categorie de l'article</option>
+            <option value="Entree">1.Entrée</option>
+            <option value="Desserts">2.Dessert</option>
+            <option value="Plats">3.Plat</option>
+            <option value="Boissons">4.Boisson</option>
+        </select>
+        <button id="validate">Valider</button>
+    </form>
 
     </div>
 </main>
 
 
 
-
+<div id="done"></div>
 <script src="./script.js"></script>    
 </body>
 </html>
