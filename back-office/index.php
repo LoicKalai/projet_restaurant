@@ -1,9 +1,5 @@
 <?php
-
-$host = 'localhost';
-$dbname = 'Restaurant';
-$username = 'phpmyadmin';
-$password = '632bifhm0l';
+include './password.php';
 
 $entrees = "SELECT Nom,Prix,Images FROM produits INNER JOIN categorie_plat WHERE id_categorie = categorie_plat.id AND id_categorie = 1";
 $desserts = "SELECT Nom,Prix,Images FROM produits INNER JOIN categorie_plat WHERE id_categorie = categorie_plat.id AND id_categorie = 2";
@@ -12,7 +8,6 @@ $boissons = "SELECT Nom,Prix,Images FROM produits INNER JOIN categorie_plat WHER
 
 try{
 	$conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-
 ?>
 
 <!DOCTYPE html>
@@ -107,35 +102,43 @@ try{
         </div>
     </div>
 
-    <form id="form" action="">
+    <form id="form" action="" method="POST">
         <p class="popp">Nom</p>
-        <input type="text" name="Nom" class="descpop">
+        <input type="text" name="name" class="descpop" id="name">
+        <span id="errormessage1"></span>
         <p class="popp">Description</p>
-        <input type="text" name="Description" class="descpop">
+        <input type="text" name="description" class="descpop" id="description">
+        <span id="errormessage2"></span>
         <p class="popp">Prix</p>
-        <input type="text" name="Prix" class="descpop">
+        <input type="text" name="price" class="descpop" id="price">
+        <span id="errormessage3"></span>
         <p class="popp">Images</p>
         <div class="input-group">
-            <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+            <input type="file" name="image" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
         </div>
+        <span id="errormessage4"></span>
         <p class="popp">Id_categorie</p>
-        <select name="id_categorie" class="descpop">
+        <select name="id_category" class="descpop" id="foodclass">
             <option value="">Choisissez la categorie de l'article</option>
             <option value="Entree">1.Entrée</option>
             <option value="Desserts">2.Dessert</option>
             <option value="Plats">3.Plat</option>
             <option value="Boissons">4.Boisson</option>
         </select>
+        <span id="errormessage5"></span>
         <button id="validate">Valider</button>
     </form>
 
+
+
+
+
+
+
     </div>
 </main>
-
-
-
-<div id="done"></div>
-<script src="./script.js"></script>    
+<div id="done"><button id="ok">Ok</button></div>
+<script src="script.js"></script>    
 </body>
 </html>
 
