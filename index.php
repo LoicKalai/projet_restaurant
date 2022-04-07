@@ -49,7 +49,7 @@ http://www.templatemo.com/tm-515-eatery
             <span class="spinner-rotate"></span>
 
         </div>
-    </section>
+    </section> 
 
 
 
