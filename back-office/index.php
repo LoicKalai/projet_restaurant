@@ -113,9 +113,7 @@ try{
         <input type="text" name="price" class="descpop" id="price">
         <span id="errormessage3"></span>
         <p class="popp">Images</p>
-        <div class="input-group">
-            <input type="file" name="image" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-        </div>
+        <input type="url" name="image" class="descpop" id="image">
         <span id="errormessage4"></span>
         <p class="popp">Id_categorie</p>
         <select name="id_category" class="descpop" id="foodclass">

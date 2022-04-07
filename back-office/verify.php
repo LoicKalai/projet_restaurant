@@ -38,7 +38,7 @@ if(($name)&&($description)&&($price)){
 $dbh = new PDO('mysql:host=localhost; dbname=produits', $username, $password)
 
 $stmt = $dbh->prepare('INSERT INTO produits (Nom, Description, Prix, Images, id_categorie) VALUES (:Nom, :Description, :Prix, :Images, :id_categorie)');
-$stmt->bindParam(':Nom', $name, ':Description', $description, ':Prix', $price, ':Images', $image, ':id_categorie', $id_category');
+$stmt->bindParam(':Nom', $name, ':Description', $description, ':Prix', $price, ':Images', $image, ':id_categorie', $id_category);
 
 $stmt->execute();
 
