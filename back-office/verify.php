@@ -33,10 +33,16 @@ if(($name)&&($description)&&($price)){
     echo json_encode($res);
     $updateprod = $conn->prepare('INSERT INTO produits (Nom, Description, Prix, Images, id_categorie) VALUES (?, ?, ?, ?, ?)');     
     $updateprod->execute(array($name, $description, $price, $image['name'], $id_category));
-    
-
 }
 
+$dbh = new PDO('mysql:host=localhost; dbname=produits', $username, $password)
+
+$stmt = $dbh->prepare('INSERT INTO produits (Nom, Description, Prix, Images, id_categorie) VALUES (:Nom, :Description, :Prix, :Images, :id_categorie)');
+$stmt->bindParam(':Nom', $name, ':Description', $description, ':Prix', $price, ':Images', $image, ':id_categorie', $id_category');
+
+$stmt->execute();
+
+echo json_encode($_POST);
 
 if($stmt === false){
     die("Erreur");
