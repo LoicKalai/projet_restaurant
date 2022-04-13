@@ -100,7 +100,7 @@ $boissons = "SELECT Nom,Prix,Images FROM produits INNER JOIN categorie_plat WHER
         </div>
     </div>
 
-    <form id="form"  method="POST">
+    <form id="form"  method="POST" action="ajout.php">
 
         <div class="bloc_croix">
         <img src="assets/cross.svg" class="croix" alt="croix de fermeture"> <!--CROIX FERMETURE FORM-->
@@ -126,7 +126,7 @@ $boissons = "SELECT Nom,Prix,Images FROM produits INNER JOIN categorie_plat WHER
         <input type="number" name="id_category" class="descpop" id="id_category">
         <span id="errormessage5"></span>
         
-        <button id="validate">Valider</button>
+        <button type="submit" id="validate">Valider</button>
     </form>
 
 
@@ -134,8 +134,9 @@ $boissons = "SELECT Nom,Prix,Images FROM produits INNER JOIN categorie_plat WHER
 </main>
 <div id="done"><button id="ok">Ok</button></div>
 
+
 <script src="script.js"></script>
-<!-- <script src="ajout.js"></script>   -->
+<!-- <script src="ajout.js"></script> -->
   
 </body>
 </html>

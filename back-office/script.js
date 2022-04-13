@@ -107,47 +107,30 @@ form.addEventListener('submit', function(event) {
         error5.innerHTML = 'Choisissez une categorie'
         error5.style.display = 'flex'
     }
-    function isName(){
-        let regex1 = /^[A-Za-z][A-Za-z]+$/;
-        return regex1.test()
-    }
-    
-   
-    console.log(isName(inputinfo.first));
-    
+
+
+
+
+    const formData = new FormData(form); 
+    fetch('ajout.php', {
+        method: 'POST',
+        body: formData
+        })
+        .then((response) => {
+        return response.json()
+        })
+        .then((data) => {
+        console.log(data);
+        })
+
+
     if (isNotEmpty(inputinfo.first) && isNotEmpty(inputinfo.second) && isNotEmpty(inputinfo.third)) {
-        if (isName(inputinfo.first) && isName(inputinfo.second) && isName(inputinfo.third)) {
+
             
 
             // AJAX avec Fetch
-    // const form = document.querySelector('form');
-    // form.addEventListener('submit', function(e) {
-    //     e.preventDefault();
-        
-
-        const formData = new FormData(form); 
-        fetch('ajout.php', {
-            method: 'POST',
-            body: formData
-            })
-            .then((response) => {
-            return response.json()
-            })
-            .then((data) => {
-            console.log(data);
-            })
-        // })
 
 
-            // fetch('../ajout.php', {
-            // method: 'POST',
-            // body: formData
-            // })
-            // .then((response) => {
-            // return response.json()
-            // }) 
-            // .then((data) => {
-            // console.log(data);
             res.style.display = 'flex';
             main.classList.add('qqch')
             error1.style.display = 'none';
@@ -156,16 +139,10 @@ form.addEventListener('submit', function(event) {
             error4.style.display = 'none';
             error5.style.display = 'none';
              
-        }
-    
-    else {
-        
+   
     }
-        }
-        else{
-            
-        }
-    })
+})
+
      /* NOT EMPTY */
     
        function isNotEmpty(value) {
